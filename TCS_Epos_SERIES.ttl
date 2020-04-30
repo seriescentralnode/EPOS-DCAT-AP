@@ -16,6 +16,21 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .  
 @prefix gsp: <http://www.opengis.net/ont/geosparql#> .  
     
+<http://orcid.org/0000-0001-8431-1030/legalContact> a schema:ContactPoint;
+        schema:email "xenpal@upatras.gr";
+	    schema:availableLanguage "en" ;
+	    schema:contactType "legalContact";
+.        
+<http://orcid.org/0000-0001-8431-1030/financialContact> a schema:ContactPoint;
+        schema:email "xenpal@upatras.gr";
+        schema:availableLanguage "en" ;
+        schema:contactType "financialContact";
+.        
+<http://orcid.org/0000-0001-8431-1030/scientificContact> a schema:ContactPoint;
+        schema:email "xenpal@upatras.gr";
+        schema:availableLanguage "en" ;
+        schema:contactType "scientificContact";
+.        
 <http://orcid.org/0000-0002-1302-2175/legalContact> a schema:ContactPoint;
         schema:email "fardis@upatras.gr";
 	    schema:availableLanguage "en" ;
@@ -45,6 +60,43 @@
         schema:email "sbousias@upatras.gr";
         schema:availableLanguage "en" ;
         schema:contactType "scientificContact";
+.        
+<http://orcid.org/0000-0003-0048-8344/legalContact> a schema:ContactPoint;
+        schema:email "ilstrepelias@upatras.gr";
+	    schema:availableLanguage "en" ;
+	    schema:contactType "legalContact";
+.        
+<http://orcid.org/0000-0003-0048-8344/financialContact> a schema:ContactPoint;
+        schema:email "ilstrepelias@upatras.gr";
+        schema:availableLanguage "en" ;
+        schema:contactType "financialContact";
+.        
+<http://orcid.org/0000-0003-0048-8344/scientificContact> a schema:ContactPoint;
+        schema:email "ilstrepelias@upatras.gr";
+        schema:availableLanguage "en" ;
+        schema:contactType "scientificContact";
+.        
+<http://orcid.org/0000-0001-8431-1030> a schema:Person;
+    	schema:identifier [ a schema:PropertyValue;
+    		schema:propertyID "orcid";
+    		schema:value "0000-0001-8431-1030";
+    	]; 
+    	schema:familyName "Palios";
+    	schema:givenName "Xenofon";
+    	schema:address [ a schema:PostalAddress ;
+	 	    schema:streetAddress "Department of Civil Engineering, University of Patras" ;
+		    schema:addressLocality "Rio Achaia" ;
+		    schema:postalCode "26500" ;
+		    schema:addressCountry "Greece" ;
+	    ];
+	    schema:email "xenpal@upatras.gr" ;
+	    schema:telephone "-" ;
+	    schema:url  "http://www.strulab.civil.upatras.gr/node/791"^^xsd:anyURI ;
+	    schema:qualifications "Local Coinvestigator" ;
+	    schema:affiliation <PIC:999894528> ;
+	    schema:contactPoint <http://orcid.org/0000-0001-8431-1030/legalContact> ;
+	    schema:contactPoint <http://orcid.org/0000-0001-8431-1030/scientificContact> ;
+	    schema:contactPoint <http://orcid.org/0000-0001-8431-1030/financialContact> ;
 .        
 <http://orcid.org/0000-0002-1302-2175> a schema:Person;
     	schema:identifier [ a schema:PropertyValue;
@@ -90,6 +142,28 @@
 	    schema:contactPoint <http://orcid.org/0000-0002-8616-334X/scientificContact> ;
 	    schema:contactPoint <http://orcid.org/0000-0002-8616-334X/financialContact> ;
 .        
+<http://orcid.org/0000-0003-0048-8344> a schema:Person;
+    	schema:identifier [ a schema:PropertyValue;
+    		schema:propertyID "orcid";
+    		schema:value "0000-0003-0048-8344";
+    	]; 
+    	schema:familyName "Strepelias";
+    	schema:givenName "Ilias";
+    	schema:address [ a schema:PostalAddress ;
+	 	    schema:streetAddress "Department of Civil Engineering, University of Patras" ;
+		    schema:addressLocality "Rio Achaia" ;
+		    schema:postalCode "26500" ;
+		    schema:addressCountry "Greece" ;
+	    ];
+	    schema:email "ilstrepelias@upatras.gr" ;
+	    schema:telephone "-" ;
+	    schema:url  "http://www.strulab.civil.upatras.gr/node/792"^^xsd:anyURI ;
+	    schema:qualifications "Local Coinvestigator" ;
+	    schema:affiliation <PIC:999894528> ;
+	    schema:contactPoint <http://orcid.org/0000-0003-0048-8344/legalContact> ;
+	    schema:contactPoint <http://orcid.org/0000-0003-0048-8344/scientificContact> ;
+	    schema:contactPoint <http://orcid.org/0000-0003-0048-8344/financialContact> ;
+.        
 <epos:SeismicEngineering> a skos:ConceptScheme;
 		dct:title "Seismic Engineering";
 		dct:description "It contains the projects of Seismic Engineering (SERIES).";
@@ -121,9 +195,9 @@
     	skos:prefLabel "Pseudodynamic Tests on 4-storey Nonductile Frames with RC Infilling of the Bay";
 . 
         
-<SERIES/dataset/project/33462> a dcat:Dataset;
+<SERIES/dataset/project/1> a dcat:Dataset;
     	dct:title "Pseudodynamic Tests on 4-storey Nonductile Frames with RC Infilling of the Bay";
-    	dct:identifier "SERIES/dataset/project/33462";
+    	dct:identifier "SERIES/dataset/project/1";
     	adms:identifier [ a adms:Identifier;
     		adms:schemaAgency "DDSS-ID";
     		skos:notation "WP17-DDSS-P0";
@@ -133,47 +207,45 @@
     	dct:temporal [ a dct:PeriodOfTime; 
     		schema:startDate "2010-01-01T00:00:00Z"^^xsd:date;
     	];
+    	dct:spatial [ a dct:Location;
+	        locn:geometry "POINT(21.7780958 38.2868967)"^^gsp:wktLiteral;
+];
     	dcat:theme <epos:PseudodynamicTestson4-storeyNonductileFrameswithRCInfillingoftheBay>;
     	dcat:keyword "KANEPE", "OASP";
         dcat:contactPoint <http://orcid.org/0000-0002-8616-334X/scientificContact> ;
     	dct:publisher <PIC:999894528>;
-    	dcat:distribution <SERIES/distribution/project/33462>;
+    	dcat:distribution <SERIES/distribution/project/1>;
 .
                   
-<SERIES/distribution/project/33462> a dcat:Distribution;
-    dct:identifier "SERIES/distribution/project/33462";
+<SERIES/distribution/project/1> a dcat:Distribution;
+    dct:identifier "SERIES/distribution/project/1";
     dct:title "Pseudodynamic Tests on 4-storey Nonductile Frames with RC Infilling of the Bay project information";
     dct:description "Enables to download information/report about the project";
     dct:type "http://publications.europa.eu/resource/authority/distribution-type/WEB_SERVICE"^^xsd:anyURI;
     dct:conformsTo <SERIES/webservice/series_epos_platform>;
-    dcat:accessURL <SERIES/webservice/series_epos_platform/project_reports/33462>;
+    dcat:accessURL <SERIES/webservice/series_epos_platform/project_reports/1>;
     dct:format "http://publications.europa.eu/resource/authority/file-type/XML"^^xsd:anyURI;
 .
     
-<SERIES/webservice/series_epos_platform/project_reports/33462> a hydra:Operation;
+<SERIES/webservice/series_epos_platform/project_reports/1> a hydra:Operation;
     hydra:method "GET"^^xsd:string;
     hydra:returns "application/xml";
     hydra:property[ a hydra:IriTemplate;
-        hydra:template "http://150.140.186.214:53361/TCS_Metadata_Retrieval_WS/WebService.asmx/project_reports?project_id={?project_id}"^^xsd:string;
+        hydra:template "http://www.dap.series.upatras.gr/TCS_Metadata_Retrieval/WebService.asmx/project_reports?project_id={?project_id}"^^xsd:string;
             hydra:mapping[ a hydra:IriTemplateMapping;
                 hydra:variable "project_id"^^xsd:string;
                 rdfs:range "xsd:string";
                 rdfs:label "Download metadata of project: Pseudodynamic Tests on 4-storey Nonductile Frames with RC Infilling of the Bay. ";
-                http:paramValue "33462";
+            schema:defaultValue "1";
+                http:paramValue "1";
                 hydra:required "true"^^xsd:boolean;
 				];
 		] ; 
 .
     
-<epos:KE_RetrofittedBuilding1> a skos:Concept;
-        skos:inScheme <epos:SeismicEngineering>;
-        skos:broader <epos:PseudodynamicTestson4-storeyNonductileFrameswithRCInfillingoftheBay>;
-        skos:prefLabel "KE_Retrofitted Building 1";
-. 
-            
-<SERIES/dataset/specimen/1458463> a dcat:Dataset;
+<SERIES/dataset/specimen/1> a dcat:Dataset;
         dct:title "KE_Retrofitted Building 1";
-        dct:identifier "SERIES/dataset/specimen/1458463";
+        dct:identifier "SERIES/dataset/specimen/1";
         adms:identifier [ a adms:Identifier;
         	adms:schemaAgency "DDSS-ID";
         	skos:notation "WP17-DDSS-S0";
@@ -183,47 +255,45 @@
     	dct:temporal [ a dct:PeriodOfTime; 
     		schema:startDate "2010-01-01T00:00:00Z"^^xsd:date;
     	];
-        dcat:theme <epos:KE_RetrofittedBuilding1>;
+    	dct:spatial [ a dct:Location;
+	        locn:geometry "POINT(21.7780958 38.2868967)"^^gsp:wktLiteral;
+];
+        dcat:theme <epos:PseudodynamicTestson4-storeyNonductileFrameswithRCInfillingoftheBay>;
         dcat:keyword "KE_Retrofitted Building 1";
         dcat:contactPoint <http://orcid.org/0000-0002-8616-334X/scientificContact> ;
         dct:publisher <PIC:999894528>;
-        dcat:distribution <SERIES/distribution/specimen/1458463>;
+        dcat:distribution <SERIES/distribution/specimen/1>;
 .
                       
-<SERIES/distribution/specimen/1458463> a dcat:Distribution;
-    dct:identifier "SERIES/distribution/specimen/1458463";
+<SERIES/distribution/specimen/1> a dcat:Distribution;
+    dct:identifier "SERIES/distribution/specimen/1";
     dct:title "KE_Retrofitted Building 1 project information";
     dct:description "Enables to download information/report about the specimen";
     dct:type "http://publications.europa.eu/resource/authority/distribution-type/WEB_SERVICE"^^xsd:anyURI;
     dct:conformsTo <SERIES/webservice/series_epos_platform>;
-    dcat:accessURL <SERIES/webservice/series_epos_platform/specimen_reports/1458463>;
+    dcat:accessURL <SERIES/webservice/series_epos_platform/specimen_reports/1>;
     dct:format "http://publications.europa.eu/resource/authority/file-type/XML"^^xsd:anyURI;
 .
         
-<SERIES/webservice/series_epos_platform/specimen_reports/1458463> a hydra:Operation;
+<SERIES/webservice/series_epos_platform/specimen_reports/1> a hydra:Operation;
     hydra:method "GET"^^xsd:string;
     hydra:returns "application/xml";
     hydra:property[ a hydra:IriTemplate;
-        hydra:template "http://150.140.186.214:53361/TCS_Metadata_Retrieval_WS/WebService.asmx/specimen_reports?specimen_id={?specimen_id}"^^xsd:string;
+        hydra:template "http://www.dap.series.upatras.gr/TCS_Metadata_Retrieval/WebService.asmx/specimen_reports?specimen_id={?specimen_id}"^^xsd:string;
             hydra:mapping[ a hydra:IriTemplateMapping;
                 hydra:variable "specimen_id"^^xsd:string;
                 rdfs:range "xsd:string";
                 rdfs:label "Download metadata of specimen: KE_Retrofitted Building 1. ";
-                http:paramValue "1458463";
+            schema:defaultValue "1";
+                http:paramValue "1";
                 hydra:required "true"^^xsd:boolean;
                 ];
         ] ; 
 .
     
-<epos:KE_RetrofittedBuilding2> a skos:Concept;
-        skos:inScheme <epos:SeismicEngineering>;
-        skos:broader <epos:PseudodynamicTestson4-storeyNonductileFrameswithRCInfillingoftheBay>;
-        skos:prefLabel "KE_Retrofitted Building 2";
-. 
-            
-<SERIES/dataset/specimen/1458464> a dcat:Dataset;
+<SERIES/dataset/specimen/2> a dcat:Dataset;
         dct:title "KE_Retrofitted Building 2";
-        dct:identifier "SERIES/dataset/specimen/1458464";
+        dct:identifier "SERIES/dataset/specimen/2";
         adms:identifier [ a adms:Identifier;
         	adms:schemaAgency "DDSS-ID";
         	skos:notation "WP17-DDSS-S1";
@@ -233,47 +303,45 @@
     	dct:temporal [ a dct:PeriodOfTime; 
     		schema:startDate "2010-01-01T00:00:00Z"^^xsd:date;
     	];
-        dcat:theme <epos:KE_RetrofittedBuilding2>;
+    	dct:spatial [ a dct:Location;
+	        locn:geometry "POINT(21.7780958 38.2868967)"^^gsp:wktLiteral;
+];
+        dcat:theme <epos:PseudodynamicTestson4-storeyNonductileFrameswithRCInfillingoftheBay>;
         dcat:keyword "KE_Retrofitted Building 2";
         dcat:contactPoint <http://orcid.org/0000-0002-8616-334X/scientificContact> ;
         dct:publisher <PIC:999894528>;
-        dcat:distribution <SERIES/distribution/specimen/1458464>;
+        dcat:distribution <SERIES/distribution/specimen/2>;
 .
                       
-<SERIES/distribution/specimen/1458464> a dcat:Distribution;
-    dct:identifier "SERIES/distribution/specimen/1458464";
+<SERIES/distribution/specimen/2> a dcat:Distribution;
+    dct:identifier "SERIES/distribution/specimen/2";
     dct:title "KE_Retrofitted Building 2 project information";
     dct:description "Enables to download information/report about the specimen";
     dct:type "http://publications.europa.eu/resource/authority/distribution-type/WEB_SERVICE"^^xsd:anyURI;
     dct:conformsTo <SERIES/webservice/series_epos_platform>;
-    dcat:accessURL <SERIES/webservice/series_epos_platform/specimen_reports/1458464>;
+    dcat:accessURL <SERIES/webservice/series_epos_platform/specimen_reports/2>;
     dct:format "http://publications.europa.eu/resource/authority/file-type/XML"^^xsd:anyURI;
 .
         
-<SERIES/webservice/series_epos_platform/specimen_reports/1458464> a hydra:Operation;
+<SERIES/webservice/series_epos_platform/specimen_reports/2> a hydra:Operation;
     hydra:method "GET"^^xsd:string;
     hydra:returns "application/xml";
     hydra:property[ a hydra:IriTemplate;
-        hydra:template "http://150.140.186.214:53361/TCS_Metadata_Retrieval_WS/WebService.asmx/specimen_reports?specimen_id={?specimen_id}"^^xsd:string;
+        hydra:template "http://www.dap.series.upatras.gr/TCS_Metadata_Retrieval/WebService.asmx/specimen_reports?specimen_id={?specimen_id}"^^xsd:string;
             hydra:mapping[ a hydra:IriTemplateMapping;
                 hydra:variable "specimen_id"^^xsd:string;
                 rdfs:range "xsd:string";
                 rdfs:label "Download metadata of specimen: KE_Retrofitted Building 2. ";
-                http:paramValue "1458464";
+            schema:defaultValue "2";
+                http:paramValue "2";
                 hydra:required "true"^^xsd:boolean;
                 ];
         ] ; 
 .
     
-<epos:KE_RetrofittedBuilding3> a skos:Concept;
-        skos:inScheme <epos:SeismicEngineering>;
-        skos:broader <epos:PseudodynamicTestson4-storeyNonductileFrameswithRCInfillingoftheBay>;
-        skos:prefLabel "KE_Retrofitted Building 3";
-. 
-            
-<SERIES/dataset/specimen/1458465> a dcat:Dataset;
+<SERIES/dataset/specimen/4> a dcat:Dataset;
         dct:title "KE_Retrofitted Building 3";
-        dct:identifier "SERIES/dataset/specimen/1458465";
+        dct:identifier "SERIES/dataset/specimen/4";
         adms:identifier [ a adms:Identifier;
         	adms:schemaAgency "DDSS-ID";
         	skos:notation "WP17-DDSS-S2";
@@ -283,33 +351,37 @@
     	dct:temporal [ a dct:PeriodOfTime; 
     		schema:startDate "2010-01-01T00:00:00Z"^^xsd:date;
     	];
-        dcat:theme <epos:KE_RetrofittedBuilding3>;
+    	dct:spatial [ a dct:Location;
+	        locn:geometry "POINT(21.7780958 38.2868967)"^^gsp:wktLiteral;
+];
+        dcat:theme <epos:PseudodynamicTestson4-storeyNonductileFrameswithRCInfillingoftheBay>;
         dcat:keyword "KE_Retrofitted Building 3";
         dcat:contactPoint <http://orcid.org/0000-0002-8616-334X/scientificContact> ;
         dct:publisher <PIC:999894528>;
-        dcat:distribution <SERIES/distribution/specimen/1458465>;
+        dcat:distribution <SERIES/distribution/specimen/4>;
 .
                       
-<SERIES/distribution/specimen/1458465> a dcat:Distribution;
-    dct:identifier "SERIES/distribution/specimen/1458465";
+<SERIES/distribution/specimen/4> a dcat:Distribution;
+    dct:identifier "SERIES/distribution/specimen/4";
     dct:title "KE_Retrofitted Building 3 project information";
     dct:description "Enables to download information/report about the specimen";
     dct:type "http://publications.europa.eu/resource/authority/distribution-type/WEB_SERVICE"^^xsd:anyURI;
     dct:conformsTo <SERIES/webservice/series_epos_platform>;
-    dcat:accessURL <SERIES/webservice/series_epos_platform/specimen_reports/1458465>;
+    dcat:accessURL <SERIES/webservice/series_epos_platform/specimen_reports/4>;
     dct:format "http://publications.europa.eu/resource/authority/file-type/XML"^^xsd:anyURI;
 .
         
-<SERIES/webservice/series_epos_platform/specimen_reports/1458465> a hydra:Operation;
+<SERIES/webservice/series_epos_platform/specimen_reports/4> a hydra:Operation;
     hydra:method "GET"^^xsd:string;
     hydra:returns "application/xml";
     hydra:property[ a hydra:IriTemplate;
-        hydra:template "http://150.140.186.214:53361/TCS_Metadata_Retrieval_WS/WebService.asmx/specimen_reports?specimen_id={?specimen_id}"^^xsd:string;
+        hydra:template "http://www.dap.series.upatras.gr/TCS_Metadata_Retrieval/WebService.asmx/specimen_reports?specimen_id={?specimen_id}"^^xsd:string;
             hydra:mapping[ a hydra:IriTemplateMapping;
                 hydra:variable "specimen_id"^^xsd:string;
                 rdfs:range "xsd:string";
                 rdfs:label "Download metadata of specimen: KE_Retrofitted Building 3. ";
-                http:paramValue "1458465";
+            schema:defaultValue "4";
+                http:paramValue "4";
                 hydra:required "true"^^xsd:boolean;
                 ];
         ] ; 
@@ -320,9 +392,9 @@
     	skos:prefLabel "Seismic Performance Assessment and Rehabilitation of Existing Buildings";
 . 
         
-<SERIES/dataset/project/33465> a dcat:Dataset;
+<SERIES/dataset/project/8> a dcat:Dataset;
     	dct:title "Seismic Performance Assessment and Rehabilitation of Existing Buildings";
-    	dct:identifier "SERIES/dataset/project/33465";
+    	dct:identifier "SERIES/dataset/project/8";
     	adms:identifier [ a adms:Identifier;
     		adms:schemaAgency "DDSS-ID";
     		skos:notation "WP17-DDSS-P1";
@@ -332,47 +404,45 @@
     	dct:temporal [ a dct:PeriodOfTime; 
     		schema:startDate "2001-01-01T00:00:00Z"^^xsd:date;
     	];
+    	dct:spatial [ a dct:Location;
+	        locn:geometry "POINT(21.7780958 38.2868967)"^^gsp:wktLiteral;
+];
     	dcat:theme <epos:SeismicPerformanceAssessmentandRehabilitationofExistingBuildings>;
     	dcat:keyword "SPEAR", "EU";
         dcat:contactPoint <http://orcid.org/0000-0002-8616-334X/scientificContact> ;
     	dct:publisher <PIC:999894528>;
-    	dcat:distribution <SERIES/distribution/project/33465>;
+    	dcat:distribution <SERIES/distribution/project/8>;
 .
                   
-<SERIES/distribution/project/33465> a dcat:Distribution;
-    dct:identifier "SERIES/distribution/project/33465";
+<SERIES/distribution/project/8> a dcat:Distribution;
+    dct:identifier "SERIES/distribution/project/8";
     dct:title "Seismic Performance Assessment and Rehabilitation of Existing Buildings project information";
     dct:description "Enables to download information/report about the project";
     dct:type "http://publications.europa.eu/resource/authority/distribution-type/WEB_SERVICE"^^xsd:anyURI;
     dct:conformsTo <SERIES/webservice/series_epos_platform>;
-    dcat:accessURL <SERIES/webservice/series_epos_platform/project_reports/33465>;
+    dcat:accessURL <SERIES/webservice/series_epos_platform/project_reports/8>;
     dct:format "http://publications.europa.eu/resource/authority/file-type/XML"^^xsd:anyURI;
 .
     
-<SERIES/webservice/series_epos_platform/project_reports/33465> a hydra:Operation;
+<SERIES/webservice/series_epos_platform/project_reports/8> a hydra:Operation;
     hydra:method "GET"^^xsd:string;
     hydra:returns "application/xml";
     hydra:property[ a hydra:IriTemplate;
-        hydra:template "http://150.140.186.214:53361/TCS_Metadata_Retrieval_WS/WebService.asmx/project_reports?project_id={?project_id}"^^xsd:string;
+        hydra:template "http://www.dap.series.upatras.gr/TCS_Metadata_Retrieval/WebService.asmx/project_reports?project_id={?project_id}"^^xsd:string;
             hydra:mapping[ a hydra:IriTemplateMapping;
                 hydra:variable "project_id"^^xsd:string;
                 rdfs:range "xsd:string";
                 rdfs:label "Download metadata of project: Seismic Performance Assessment and Rehabilitation of Existing Buildings. ";
-                http:paramValue "33465";
+            schema:defaultValue "8";
+                http:paramValue "8";
                 hydra:required "true"^^xsd:boolean;
 				];
 		] ; 
 .
     
-<epos:SR_Q_RC> a skos:Concept;
-        skos:inScheme <epos:SeismicEngineering>;
-        skos:broader <epos:SeismicPerformanceAssessmentandRehabilitationofExistingBuildings>;
-        skos:prefLabel "SR_Q_RC";
-. 
-            
-<SERIES/dataset/specimen/1459293> a dcat:Dataset;
+<SERIES/dataset/specimen/1401> a dcat:Dataset;
         dct:title "SR_Q_RC";
-        dct:identifier "SERIES/dataset/specimen/1459293";
+        dct:identifier "SERIES/dataset/specimen/1401";
         adms:identifier [ a adms:Identifier;
         	adms:schemaAgency "DDSS-ID";
         	skos:notation "WP17-DDSS-S3";
@@ -382,47 +452,45 @@
     	dct:temporal [ a dct:PeriodOfTime; 
     		schema:startDate "2001-01-01T00:00:00Z"^^xsd:date;
     	];
-        dcat:theme <epos:SR_Q_RC>;
+    	dct:spatial [ a dct:Location;
+	        locn:geometry "POINT(21.7780958 38.2868967)"^^gsp:wktLiteral;
+];
+        dcat:theme <epos:SeismicPerformanceAssessmentandRehabilitationofExistingBuildings>;
         dcat:keyword "SR_Q_RC";
         dcat:contactPoint <http://orcid.org/0000-0002-8616-334X/scientificContact> ;
         dct:publisher <PIC:999894528>;
-        dcat:distribution <SERIES/distribution/specimen/1459293>;
+        dcat:distribution <SERIES/distribution/specimen/1401>;
 .
                       
-<SERIES/distribution/specimen/1459293> a dcat:Distribution;
-    dct:identifier "SERIES/distribution/specimen/1459293";
+<SERIES/distribution/specimen/1401> a dcat:Distribution;
+    dct:identifier "SERIES/distribution/specimen/1401";
     dct:title "SR_Q_RC project information";
     dct:description "Enables to download information/report about the specimen";
     dct:type "http://publications.europa.eu/resource/authority/distribution-type/WEB_SERVICE"^^xsd:anyURI;
     dct:conformsTo <SERIES/webservice/series_epos_platform>;
-    dcat:accessURL <SERIES/webservice/series_epos_platform/specimen_reports/1459293>;
+    dcat:accessURL <SERIES/webservice/series_epos_platform/specimen_reports/1401>;
     dct:format "http://publications.europa.eu/resource/authority/file-type/XML"^^xsd:anyURI;
 .
         
-<SERIES/webservice/series_epos_platform/specimen_reports/1459293> a hydra:Operation;
+<SERIES/webservice/series_epos_platform/specimen_reports/1401> a hydra:Operation;
     hydra:method "GET"^^xsd:string;
     hydra:returns "application/xml";
     hydra:property[ a hydra:IriTemplate;
-        hydra:template "http://150.140.186.214:53361/TCS_Metadata_Retrieval_WS/WebService.asmx/specimen_reports?specimen_id={?specimen_id}"^^xsd:string;
+        hydra:template "http://www.dap.series.upatras.gr/TCS_Metadata_Retrieval/WebService.asmx/specimen_reports?specimen_id={?specimen_id}"^^xsd:string;
             hydra:mapping[ a hydra:IriTemplateMapping;
                 hydra:variable "specimen_id"^^xsd:string;
                 rdfs:range "xsd:string";
                 rdfs:label "Download metadata of specimen: SR_Q_RC. ";
-                http:paramValue "1459293";
+            schema:defaultValue "1401";
+                http:paramValue "1401";
                 hydra:required "true"^^xsd:boolean;
                 ];
         ] ; 
 .
     
-<epos:SR_Q_RCD> a skos:Concept;
-        skos:inScheme <epos:SeismicEngineering>;
-        skos:broader <epos:SeismicPerformanceAssessmentandRehabilitationofExistingBuildings>;
-        skos:prefLabel "SR_Q_RCD";
-. 
-            
-<SERIES/dataset/specimen/1459294> a dcat:Dataset;
+<SERIES/dataset/specimen/1402> a dcat:Dataset;
         dct:title "SR_Q_RCD";
-        dct:identifier "SERIES/dataset/specimen/1459294";
+        dct:identifier "SERIES/dataset/specimen/1402";
         adms:identifier [ a adms:Identifier;
         	adms:schemaAgency "DDSS-ID";
         	skos:notation "WP17-DDSS-S4";
@@ -432,47 +500,45 @@
     	dct:temporal [ a dct:PeriodOfTime; 
     		schema:startDate "2001-01-01T00:00:00Z"^^xsd:date;
     	];
-        dcat:theme <epos:SR_Q_RCD>;
+    	dct:spatial [ a dct:Location;
+	        locn:geometry "POINT(21.7780958 38.2868967)"^^gsp:wktLiteral;
+];
+        dcat:theme <epos:SeismicPerformanceAssessmentandRehabilitationofExistingBuildings>;
         dcat:keyword "SR_Q_RCD";
         dcat:contactPoint <http://orcid.org/0000-0002-8616-334X/scientificContact> ;
         dct:publisher <PIC:999894528>;
-        dcat:distribution <SERIES/distribution/specimen/1459294>;
+        dcat:distribution <SERIES/distribution/specimen/1402>;
 .
                       
-<SERIES/distribution/specimen/1459294> a dcat:Distribution;
-    dct:identifier "SERIES/distribution/specimen/1459294";
+<SERIES/distribution/specimen/1402> a dcat:Distribution;
+    dct:identifier "SERIES/distribution/specimen/1402";
     dct:title "SR_Q_RCD project information";
     dct:description "Enables to download information/report about the specimen";
     dct:type "http://publications.europa.eu/resource/authority/distribution-type/WEB_SERVICE"^^xsd:anyURI;
     dct:conformsTo <SERIES/webservice/series_epos_platform>;
-    dcat:accessURL <SERIES/webservice/series_epos_platform/specimen_reports/1459294>;
+    dcat:accessURL <SERIES/webservice/series_epos_platform/specimen_reports/1402>;
     dct:format "http://publications.europa.eu/resource/authority/file-type/XML"^^xsd:anyURI;
 .
         
-<SERIES/webservice/series_epos_platform/specimen_reports/1459294> a hydra:Operation;
+<SERIES/webservice/series_epos_platform/specimen_reports/1402> a hydra:Operation;
     hydra:method "GET"^^xsd:string;
     hydra:returns "application/xml";
     hydra:property[ a hydra:IriTemplate;
-        hydra:template "http://150.140.186.214:53361/TCS_Metadata_Retrieval_WS/WebService.asmx/specimen_reports?specimen_id={?specimen_id}"^^xsd:string;
+        hydra:template "http://www.dap.series.upatras.gr/TCS_Metadata_Retrieval/WebService.asmx/specimen_reports?specimen_id={?specimen_id}"^^xsd:string;
             hydra:mapping[ a hydra:IriTemplateMapping;
                 hydra:variable "specimen_id"^^xsd:string;
                 rdfs:range "xsd:string";
                 rdfs:label "Download metadata of specimen: SR_Q_RCD. ";
-                http:paramValue "1459294";
+            schema:defaultValue "1402";
+                http:paramValue "1402";
                 hydra:required "true"^^xsd:boolean;
                 ];
         ] ; 
 .
     
-<epos:SR_Q_RCL1> a skos:Concept;
-        skos:inScheme <epos:SeismicEngineering>;
-        skos:broader <epos:SeismicPerformanceAssessmentandRehabilitationofExistingBuildings>;
-        skos:prefLabel "SR_Q_RCL1";
-. 
-            
-<SERIES/dataset/specimen/1459295> a dcat:Dataset;
+<SERIES/dataset/specimen/1403> a dcat:Dataset;
         dct:title "SR_Q_RCL1";
-        dct:identifier "SERIES/dataset/specimen/1459295";
+        dct:identifier "SERIES/dataset/specimen/1403";
         adms:identifier [ a adms:Identifier;
         	adms:schemaAgency "DDSS-ID";
         	skos:notation "WP17-DDSS-S5";
@@ -482,47 +548,45 @@
     	dct:temporal [ a dct:PeriodOfTime; 
     		schema:startDate "2001-01-01T00:00:00Z"^^xsd:date;
     	];
-        dcat:theme <epos:SR_Q_RCL1>;
+    	dct:spatial [ a dct:Location;
+	        locn:geometry "POINT(21.7780958 38.2868967)"^^gsp:wktLiteral;
+];
+        dcat:theme <epos:SeismicPerformanceAssessmentandRehabilitationofExistingBuildings>;
         dcat:keyword "SR_Q_RCL1";
         dcat:contactPoint <http://orcid.org/0000-0002-8616-334X/scientificContact> ;
         dct:publisher <PIC:999894528>;
-        dcat:distribution <SERIES/distribution/specimen/1459295>;
+        dcat:distribution <SERIES/distribution/specimen/1403>;
 .
                       
-<SERIES/distribution/specimen/1459295> a dcat:Distribution;
-    dct:identifier "SERIES/distribution/specimen/1459295";
+<SERIES/distribution/specimen/1403> a dcat:Distribution;
+    dct:identifier "SERIES/distribution/specimen/1403";
     dct:title "SR_Q_RCL1 project information";
     dct:description "Enables to download information/report about the specimen";
     dct:type "http://publications.europa.eu/resource/authority/distribution-type/WEB_SERVICE"^^xsd:anyURI;
     dct:conformsTo <SERIES/webservice/series_epos_platform>;
-    dcat:accessURL <SERIES/webservice/series_epos_platform/specimen_reports/1459295>;
+    dcat:accessURL <SERIES/webservice/series_epos_platform/specimen_reports/1403>;
     dct:format "http://publications.europa.eu/resource/authority/file-type/XML"^^xsd:anyURI;
 .
         
-<SERIES/webservice/series_epos_platform/specimen_reports/1459295> a hydra:Operation;
+<SERIES/webservice/series_epos_platform/specimen_reports/1403> a hydra:Operation;
     hydra:method "GET"^^xsd:string;
     hydra:returns "application/xml";
     hydra:property[ a hydra:IriTemplate;
-        hydra:template "http://150.140.186.214:53361/TCS_Metadata_Retrieval_WS/WebService.asmx/specimen_reports?specimen_id={?specimen_id}"^^xsd:string;
+        hydra:template "http://www.dap.series.upatras.gr/TCS_Metadata_Retrieval/WebService.asmx/specimen_reports?specimen_id={?specimen_id}"^^xsd:string;
             hydra:mapping[ a hydra:IriTemplateMapping;
                 hydra:variable "specimen_id"^^xsd:string;
                 rdfs:range "xsd:string";
                 rdfs:label "Download metadata of specimen: SR_Q_RCL1. ";
-                http:paramValue "1459295";
+            schema:defaultValue "1403";
+                http:paramValue "1403";
                 hydra:required "true"^^xsd:boolean;
                 ];
         ] ; 
 .
     
-<epos:SR_Q_RCL1pd> a skos:Concept;
-        skos:inScheme <epos:SeismicEngineering>;
-        skos:broader <epos:SeismicPerformanceAssessmentandRehabilitationofExistingBuildings>;
-        skos:prefLabel "SR_Q_RCL1pd";
-. 
-            
-<SERIES/dataset/specimen/1459296> a dcat:Dataset;
+<SERIES/dataset/specimen/1404> a dcat:Dataset;
         dct:title "SR_Q_RCL1pd";
-        dct:identifier "SERIES/dataset/specimen/1459296";
+        dct:identifier "SERIES/dataset/specimen/1404";
         adms:identifier [ a adms:Identifier;
         	adms:schemaAgency "DDSS-ID";
         	skos:notation "WP17-DDSS-S6";
@@ -532,47 +596,45 @@
     	dct:temporal [ a dct:PeriodOfTime; 
     		schema:startDate "2001-01-01T00:00:00Z"^^xsd:date;
     	];
-        dcat:theme <epos:SR_Q_RCL1pd>;
+    	dct:spatial [ a dct:Location;
+	        locn:geometry "POINT(21.7780958 38.2868967)"^^gsp:wktLiteral;
+];
+        dcat:theme <epos:SeismicPerformanceAssessmentandRehabilitationofExistingBuildings>;
         dcat:keyword "SR_Q_RCL1pd";
         dcat:contactPoint <http://orcid.org/0000-0002-8616-334X/scientificContact> ;
         dct:publisher <PIC:999894528>;
-        dcat:distribution <SERIES/distribution/specimen/1459296>;
+        dcat:distribution <SERIES/distribution/specimen/1404>;
 .
                       
-<SERIES/distribution/specimen/1459296> a dcat:Distribution;
-    dct:identifier "SERIES/distribution/specimen/1459296";
+<SERIES/distribution/specimen/1404> a dcat:Distribution;
+    dct:identifier "SERIES/distribution/specimen/1404";
     dct:title "SR_Q_RCL1pd project information";
     dct:description "Enables to download information/report about the specimen";
     dct:type "http://publications.europa.eu/resource/authority/distribution-type/WEB_SERVICE"^^xsd:anyURI;
     dct:conformsTo <SERIES/webservice/series_epos_platform>;
-    dcat:accessURL <SERIES/webservice/series_epos_platform/specimen_reports/1459296>;
+    dcat:accessURL <SERIES/webservice/series_epos_platform/specimen_reports/1404>;
     dct:format "http://publications.europa.eu/resource/authority/file-type/XML"^^xsd:anyURI;
 .
         
-<SERIES/webservice/series_epos_platform/specimen_reports/1459296> a hydra:Operation;
+<SERIES/webservice/series_epos_platform/specimen_reports/1404> a hydra:Operation;
     hydra:method "GET"^^xsd:string;
     hydra:returns "application/xml";
     hydra:property[ a hydra:IriTemplate;
-        hydra:template "http://150.140.186.214:53361/TCS_Metadata_Retrieval_WS/WebService.asmx/specimen_reports?specimen_id={?specimen_id}"^^xsd:string;
+        hydra:template "http://www.dap.series.upatras.gr/TCS_Metadata_Retrieval/WebService.asmx/specimen_reports?specimen_id={?specimen_id}"^^xsd:string;
             hydra:mapping[ a hydra:IriTemplateMapping;
                 hydra:variable "specimen_id"^^xsd:string;
                 rdfs:range "xsd:string";
                 rdfs:label "Download metadata of specimen: SR_Q_RCL1pd. ";
-                http:paramValue "1459296";
+            schema:defaultValue "1404";
+                http:paramValue "1404";
                 hydra:required "true"^^xsd:boolean;
                 ];
         ] ; 
 .
     
-<epos:SR_Q_RCL2> a skos:Concept;
-        skos:inScheme <epos:SeismicEngineering>;
-        skos:broader <epos:SeismicPerformanceAssessmentandRehabilitationofExistingBuildings>;
-        skos:prefLabel "SR_Q_RCL2";
-. 
-            
-<SERIES/dataset/specimen/1459297> a dcat:Dataset;
+<SERIES/dataset/specimen/1405> a dcat:Dataset;
         dct:title "SR_Q_RCL2";
-        dct:identifier "SERIES/dataset/specimen/1459297";
+        dct:identifier "SERIES/dataset/specimen/1405";
         adms:identifier [ a adms:Identifier;
         	adms:schemaAgency "DDSS-ID";
         	skos:notation "WP17-DDSS-S7";
@@ -582,47 +644,45 @@
     	dct:temporal [ a dct:PeriodOfTime; 
     		schema:startDate "2001-01-01T00:00:00Z"^^xsd:date;
     	];
-        dcat:theme <epos:SR_Q_RCL2>;
+    	dct:spatial [ a dct:Location;
+	        locn:geometry "POINT(21.7780958 38.2868967)"^^gsp:wktLiteral;
+];
+        dcat:theme <epos:SeismicPerformanceAssessmentandRehabilitationofExistingBuildings>;
         dcat:keyword "SR_Q_RCL2";
         dcat:contactPoint <http://orcid.org/0000-0002-8616-334X/scientificContact> ;
         dct:publisher <PIC:999894528>;
-        dcat:distribution <SERIES/distribution/specimen/1459297>;
+        dcat:distribution <SERIES/distribution/specimen/1405>;
 .
                       
-<SERIES/distribution/specimen/1459297> a dcat:Distribution;
-    dct:identifier "SERIES/distribution/specimen/1459297";
+<SERIES/distribution/specimen/1405> a dcat:Distribution;
+    dct:identifier "SERIES/distribution/specimen/1405";
     dct:title "SR_Q_RCL2 project information";
     dct:description "Enables to download information/report about the specimen";
     dct:type "http://publications.europa.eu/resource/authority/distribution-type/WEB_SERVICE"^^xsd:anyURI;
     dct:conformsTo <SERIES/webservice/series_epos_platform>;
-    dcat:accessURL <SERIES/webservice/series_epos_platform/specimen_reports/1459297>;
+    dcat:accessURL <SERIES/webservice/series_epos_platform/specimen_reports/1405>;
     dct:format "http://publications.europa.eu/resource/authority/file-type/XML"^^xsd:anyURI;
 .
         
-<SERIES/webservice/series_epos_platform/specimen_reports/1459297> a hydra:Operation;
+<SERIES/webservice/series_epos_platform/specimen_reports/1405> a hydra:Operation;
     hydra:method "GET"^^xsd:string;
     hydra:returns "application/xml";
     hydra:property[ a hydra:IriTemplate;
-        hydra:template "http://150.140.186.214:53361/TCS_Metadata_Retrieval_WS/WebService.asmx/specimen_reports?specimen_id={?specimen_id}"^^xsd:string;
+        hydra:template "http://www.dap.series.upatras.gr/TCS_Metadata_Retrieval/WebService.asmx/specimen_reports?specimen_id={?specimen_id}"^^xsd:string;
             hydra:mapping[ a hydra:IriTemplateMapping;
                 hydra:variable "specimen_id"^^xsd:string;
                 rdfs:range "xsd:string";
                 rdfs:label "Download metadata of specimen: SR_Q_RCL2. ";
-                http:paramValue "1459297";
+            schema:defaultValue "1405";
+                http:paramValue "1405";
                 hydra:required "true"^^xsd:boolean;
                 ];
         ] ; 
 .
     
-<epos:SR_Q_RCL2pd> a skos:Concept;
-        skos:inScheme <epos:SeismicEngineering>;
-        skos:broader <epos:SeismicPerformanceAssessmentandRehabilitationofExistingBuildings>;
-        skos:prefLabel "SR_Q_RCL2pd";
-. 
-            
-<SERIES/dataset/specimen/1459298> a dcat:Dataset;
+<SERIES/dataset/specimen/1406> a dcat:Dataset;
         dct:title "SR_Q_RCL2pd";
-        dct:identifier "SERIES/dataset/specimen/1459298";
+        dct:identifier "SERIES/dataset/specimen/1406";
         adms:identifier [ a adms:Identifier;
         	adms:schemaAgency "DDSS-ID";
         	skos:notation "WP17-DDSS-S8";
@@ -632,47 +692,45 @@
     	dct:temporal [ a dct:PeriodOfTime; 
     		schema:startDate "2001-01-01T00:00:00Z"^^xsd:date;
     	];
-        dcat:theme <epos:SR_Q_RCL2pd>;
+    	dct:spatial [ a dct:Location;
+	        locn:geometry "POINT(21.7780958 38.2868967)"^^gsp:wktLiteral;
+];
+        dcat:theme <epos:SeismicPerformanceAssessmentandRehabilitationofExistingBuildings>;
         dcat:keyword "SR_Q_RCL2pd";
         dcat:contactPoint <http://orcid.org/0000-0002-8616-334X/scientificContact> ;
         dct:publisher <PIC:999894528>;
-        dcat:distribution <SERIES/distribution/specimen/1459298>;
+        dcat:distribution <SERIES/distribution/specimen/1406>;
 .
                       
-<SERIES/distribution/specimen/1459298> a dcat:Distribution;
-    dct:identifier "SERIES/distribution/specimen/1459298";
+<SERIES/distribution/specimen/1406> a dcat:Distribution;
+    dct:identifier "SERIES/distribution/specimen/1406";
     dct:title "SR_Q_RCL2pd project information";
     dct:description "Enables to download information/report about the specimen";
     dct:type "http://publications.europa.eu/resource/authority/distribution-type/WEB_SERVICE"^^xsd:anyURI;
     dct:conformsTo <SERIES/webservice/series_epos_platform>;
-    dcat:accessURL <SERIES/webservice/series_epos_platform/specimen_reports/1459298>;
+    dcat:accessURL <SERIES/webservice/series_epos_platform/specimen_reports/1406>;
     dct:format "http://publications.europa.eu/resource/authority/file-type/XML"^^xsd:anyURI;
 .
         
-<SERIES/webservice/series_epos_platform/specimen_reports/1459298> a hydra:Operation;
+<SERIES/webservice/series_epos_platform/specimen_reports/1406> a hydra:Operation;
     hydra:method "GET"^^xsd:string;
     hydra:returns "application/xml";
     hydra:property[ a hydra:IriTemplate;
-        hydra:template "http://150.140.186.214:53361/TCS_Metadata_Retrieval_WS/WebService.asmx/specimen_reports?specimen_id={?specimen_id}"^^xsd:string;
+        hydra:template "http://www.dap.series.upatras.gr/TCS_Metadata_Retrieval/WebService.asmx/specimen_reports?specimen_id={?specimen_id}"^^xsd:string;
             hydra:mapping[ a hydra:IriTemplateMapping;
                 hydra:variable "specimen_id"^^xsd:string;
                 rdfs:range "xsd:string";
                 rdfs:label "Download metadata of specimen: SR_Q_RCL2pd. ";
-                http:paramValue "1459298";
+            schema:defaultValue "1406";
+                http:paramValue "1406";
                 hydra:required "true"^^xsd:boolean;
                 ];
         ] ; 
 .
     
-<epos:SR_Q_RCM> a skos:Concept;
-        skos:inScheme <epos:SeismicEngineering>;
-        skos:broader <epos:SeismicPerformanceAssessmentandRehabilitationofExistingBuildings>;
-        skos:prefLabel "SR_Q_RCM";
-. 
-            
-<SERIES/dataset/specimen/1459299> a dcat:Dataset;
+<SERIES/dataset/specimen/1407> a dcat:Dataset;
         dct:title "SR_Q_RCM";
-        dct:identifier "SERIES/dataset/specimen/1459299";
+        dct:identifier "SERIES/dataset/specimen/1407";
         adms:identifier [ a adms:Identifier;
         	adms:schemaAgency "DDSS-ID";
         	skos:notation "WP17-DDSS-S9";
@@ -682,47 +740,45 @@
     	dct:temporal [ a dct:PeriodOfTime; 
     		schema:startDate "2001-01-01T00:00:00Z"^^xsd:date;
     	];
-        dcat:theme <epos:SR_Q_RCM>;
+    	dct:spatial [ a dct:Location;
+	        locn:geometry "POINT(21.7780958 38.2868967)"^^gsp:wktLiteral;
+];
+        dcat:theme <epos:SeismicPerformanceAssessmentandRehabilitationofExistingBuildings>;
         dcat:keyword "SR_Q_RCM";
         dcat:contactPoint <http://orcid.org/0000-0002-8616-334X/scientificContact> ;
         dct:publisher <PIC:999894528>;
-        dcat:distribution <SERIES/distribution/specimen/1459299>;
+        dcat:distribution <SERIES/distribution/specimen/1407>;
 .
                       
-<SERIES/distribution/specimen/1459299> a dcat:Distribution;
-    dct:identifier "SERIES/distribution/specimen/1459299";
+<SERIES/distribution/specimen/1407> a dcat:Distribution;
+    dct:identifier "SERIES/distribution/specimen/1407";
     dct:title "SR_Q_RCM project information";
     dct:description "Enables to download information/report about the specimen";
     dct:type "http://publications.europa.eu/resource/authority/distribution-type/WEB_SERVICE"^^xsd:anyURI;
     dct:conformsTo <SERIES/webservice/series_epos_platform>;
-    dcat:accessURL <SERIES/webservice/series_epos_platform/specimen_reports/1459299>;
+    dcat:accessURL <SERIES/webservice/series_epos_platform/specimen_reports/1407>;
     dct:format "http://publications.europa.eu/resource/authority/file-type/XML"^^xsd:anyURI;
 .
         
-<SERIES/webservice/series_epos_platform/specimen_reports/1459299> a hydra:Operation;
+<SERIES/webservice/series_epos_platform/specimen_reports/1407> a hydra:Operation;
     hydra:method "GET"^^xsd:string;
     hydra:returns "application/xml";
     hydra:property[ a hydra:IriTemplate;
-        hydra:template "http://150.140.186.214:53361/TCS_Metadata_Retrieval_WS/WebService.asmx/specimen_reports?specimen_id={?specimen_id}"^^xsd:string;
+        hydra:template "http://www.dap.series.upatras.gr/TCS_Metadata_Retrieval/WebService.asmx/specimen_reports?specimen_id={?specimen_id}"^^xsd:string;
             hydra:mapping[ a hydra:IriTemplateMapping;
                 hydra:variable "specimen_id"^^xsd:string;
                 rdfs:range "xsd:string";
                 rdfs:label "Download metadata of specimen: SR_Q_RCM. ";
-                http:paramValue "1459299";
+            schema:defaultValue "1407";
+                http:paramValue "1407";
                 hydra:required "true"^^xsd:boolean;
                 ];
         ] ; 
 .
     
-<epos:SR_Q_RCpd> a skos:Concept;
-        skos:inScheme <epos:SeismicEngineering>;
-        skos:broader <epos:SeismicPerformanceAssessmentandRehabilitationofExistingBuildings>;
-        skos:prefLabel "SR_Q_RCpd";
-. 
-            
-<SERIES/dataset/specimen/1459300> a dcat:Dataset;
+<SERIES/dataset/specimen/1408> a dcat:Dataset;
         dct:title "SR_Q_RCpd";
-        dct:identifier "SERIES/dataset/specimen/1459300";
+        dct:identifier "SERIES/dataset/specimen/1408";
         adms:identifier [ a adms:Identifier;
         	adms:schemaAgency "DDSS-ID";
         	skos:notation "WP17-DDSS-S10";
@@ -732,33 +788,37 @@
     	dct:temporal [ a dct:PeriodOfTime; 
     		schema:startDate "2001-01-01T00:00:00Z"^^xsd:date;
     	];
-        dcat:theme <epos:SR_Q_RCpd>;
+    	dct:spatial [ a dct:Location;
+	        locn:geometry "POINT(21.7780958 38.2868967)"^^gsp:wktLiteral;
+];
+        dcat:theme <epos:SeismicPerformanceAssessmentandRehabilitationofExistingBuildings>;
         dcat:keyword "SR_Q_RCpd";
         dcat:contactPoint <http://orcid.org/0000-0002-8616-334X/scientificContact> ;
         dct:publisher <PIC:999894528>;
-        dcat:distribution <SERIES/distribution/specimen/1459300>;
+        dcat:distribution <SERIES/distribution/specimen/1408>;
 .
                       
-<SERIES/distribution/specimen/1459300> a dcat:Distribution;
-    dct:identifier "SERIES/distribution/specimen/1459300";
+<SERIES/distribution/specimen/1408> a dcat:Distribution;
+    dct:identifier "SERIES/distribution/specimen/1408";
     dct:title "SR_Q_RCpd project information";
     dct:description "Enables to download information/report about the specimen";
     dct:type "http://publications.europa.eu/resource/authority/distribution-type/WEB_SERVICE"^^xsd:anyURI;
     dct:conformsTo <SERIES/webservice/series_epos_platform>;
-    dcat:accessURL <SERIES/webservice/series_epos_platform/specimen_reports/1459300>;
+    dcat:accessURL <SERIES/webservice/series_epos_platform/specimen_reports/1408>;
     dct:format "http://publications.europa.eu/resource/authority/file-type/XML"^^xsd:anyURI;
 .
         
-<SERIES/webservice/series_epos_platform/specimen_reports/1459300> a hydra:Operation;
+<SERIES/webservice/series_epos_platform/specimen_reports/1408> a hydra:Operation;
     hydra:method "GET"^^xsd:string;
     hydra:returns "application/xml";
     hydra:property[ a hydra:IriTemplate;
-        hydra:template "http://150.140.186.214:53361/TCS_Metadata_Retrieval_WS/WebService.asmx/specimen_reports?specimen_id={?specimen_id}"^^xsd:string;
+        hydra:template "http://www.dap.series.upatras.gr/TCS_Metadata_Retrieval/WebService.asmx/specimen_reports?specimen_id={?specimen_id}"^^xsd:string;
             hydra:mapping[ a hydra:IriTemplateMapping;
                 hydra:variable "specimen_id"^^xsd:string;
                 rdfs:range "xsd:string";
                 rdfs:label "Download metadata of specimen: SR_Q_RCpd. ";
-                http:paramValue "1459300";
+            schema:defaultValue "1408";
+                http:paramValue "1408";
                 hydra:required "true"^^xsd:boolean;
                 ];
         ] ; 
@@ -769,36 +829,28 @@
 	schema:description "Access to SERIES metadata";
 	schema:name "Access to SERIES metadata";
 	dcat:contactPoint <http://orcid.org/0000-0002-8616-334X/scientificContact> ;
-	hydra:entrypoint "http://150.140.186.214:53361/TCS_Metadata_Retrieval_WS"^^xsd:anyURI; 
+	hydra:entrypoint "http://www.dap.series.upatras.gr/TCS_Metadata_Retrieval/WebService.asmx"^^xsd:anyURI; 
 	schema:provider <PIC:999894528>;
+	dct:spatial [ a dct:Location;
+	        locn:geometry "POINT(21.7780958 38.2868967)"^^gsp:wktLiteral;
+];
 	schema:datePublished "2019-11-20T00:00:00Z"^^xsd:dateTime;
 	schema:dateModified "2019-01-01T00:00:00Z"^^xsd:dateTime ;
-	hydra:supportedOperation <SERIES/webservice/series_epos_platform/project_reports/33462>;
-	hydra:supportedOperation <SERIES/webservice/series_epos_platform/specimen_reports/1458463>;
-	hydra:supportedOperation <SERIES/webservice/series_epos_platform/specimen_reports/1458464>;
-	hydra:supportedOperation <SERIES/webservice/series_epos_platform/specimen_reports/1458465>;
-	hydra:supportedOperation <SERIES/webservice/series_epos_platform/project_reports/33465>;
-	hydra:supportedOperation <SERIES/webservice/series_epos_platform/specimen_reports/1459293>;
-	hydra:supportedOperation <SERIES/webservice/series_epos_platform/specimen_reports/1459294>;
-	hydra:supportedOperation <SERIES/webservice/series_epos_platform/specimen_reports/1459295>;
-	hydra:supportedOperation <SERIES/webservice/series_epos_platform/specimen_reports/1459296>;
-	hydra:supportedOperation <SERIES/webservice/series_epos_platform/specimen_reports/1459297>;
-	hydra:supportedOperation <SERIES/webservice/series_epos_platform/specimen_reports/1459298>;
-	hydra:supportedOperation <SERIES/webservice/series_epos_platform/specimen_reports/1459299>;
-	hydra:supportedOperation <SERIES/webservice/series_epos_platform/specimen_reports/1459300>;
+	hydra:supportedOperation <SERIES/webservice/series_epos_platform/project_reports/1>;
+	hydra:supportedOperation <SERIES/webservice/series_epos_platform/specimen_reports/1>;
+	hydra:supportedOperation <SERIES/webservice/series_epos_platform/specimen_reports/2>;
+	hydra:supportedOperation <SERIES/webservice/series_epos_platform/specimen_reports/4>;
+	hydra:supportedOperation <SERIES/webservice/series_epos_platform/project_reports/8>;
+	hydra:supportedOperation <SERIES/webservice/series_epos_platform/specimen_reports/1401>;
+	hydra:supportedOperation <SERIES/webservice/series_epos_platform/specimen_reports/1402>;
+	hydra:supportedOperation <SERIES/webservice/series_epos_platform/specimen_reports/1403>;
+	hydra:supportedOperation <SERIES/webservice/series_epos_platform/specimen_reports/1404>;
+	hydra:supportedOperation <SERIES/webservice/series_epos_platform/specimen_reports/1405>;
+	hydra:supportedOperation <SERIES/webservice/series_epos_platform/specimen_reports/1406>;
+	hydra:supportedOperation <SERIES/webservice/series_epos_platform/specimen_reports/1407>;
+	hydra:supportedOperation <SERIES/webservice/series_epos_platform/specimen_reports/1408>;
 	dcat:theme <epos:PseudodynamicTestson4-storeyNonductileFrameswithRCInfillingoftheBay>;
-	dcat:theme <epos:KE_RetrofittedBuilding1>;
-	dcat:theme <epos:KE_RetrofittedBuilding2>;
-	dcat:theme <epos:KE_RetrofittedBuilding3>;
 	dcat:theme <epos:SeismicPerformanceAssessmentandRehabilitationofExistingBuildings>;
-	dcat:theme <epos:SR_Q_RC>;
-	dcat:theme <epos:SR_Q_RCD>;
-	dcat:theme <epos:SR_Q_RCL1>;
-	dcat:theme <epos:SR_Q_RCL1pd>;
-	dcat:theme <epos:SR_Q_RCL2>;
-	dcat:theme <epos:SR_Q_RCL2pd>;
-	dcat:theme <epos:SR_Q_RCM>;
-	dcat:theme <epos:SR_Q_RCpd>;
 	schema:keywords "signal metadata","experiments","specimens","projects","document repository";
 . 
         
